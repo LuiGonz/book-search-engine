@@ -1,27 +1,19 @@
-import React from 'react';
-import {Header} from './components/Header';
-import {Balance} from './components/Balance';
-import {ExpensesIncome} from './components/ExpensesIncome';
-import {TransactionHistory} from './components/TransactionHistory';
-import {TransactionAdded} from './components/TransactionAdded';
-import {ProvideGlobal} from './context/GlobalState';
+import React, {Component} from "react";
+// import Header from "./Header";
+import Books from "./Books";
 
 import './App.css';
 
-function App() {
-  return (
-    <ProvideGlobal>
-      <div className="container">
-        <Header />
-        <Balance />
-        <ExpensesIncome />
-        
-        <TransactionHistory />
-        <TransactionAdded />
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div>
+          <Books />
+        </div>
       </div>
-    </ProvideGlobal>
-  );
+    );
+  }
 }
+
 export default App;
-
-
